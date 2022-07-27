@@ -1,0 +1,639 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("OC DHSCRIPT LOR", "Ocean")
+
+-- MAIN
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main")
+
+
+MainSection:NewButton("Fly", "BypassMostGame Fly", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))() 
+
+Fly(true) -- Change "true" To "false" to disable Fly
+end)
+
+MainSection:NewButton("Korblox", "Give You Korblox", function()
+    local ply = game.Players.LocalPlayer
+local chr = ply.Character
+chr.RightLowerLeg.MeshId = "902942093"
+chr.RightLowerLeg.Transparency = "1"
+chr.RightUpperLeg.MeshId = "http://www.roblox.com/asset/?id=902942096"
+chr.RightUpperLeg.TextureID = "http://roblox.com/asset/?id=902843398"
+chr.RightFoot.MeshId = "902942089"
+chr.RightFoot.Transparency = "1"
+
+end)
+
+MainSection:NewButton("Headless", "Gives You Headless", function()
+    game.Players.LocalPlayer.Character.Head.Size = Vector3.new(0,0, 0)
+    game.Players.LocalPlayer.Character.Head.Size = Vector3.new(0,0, 0)
+    game.Players.LocalPlayer.Character.Head.Massless = true
+    game.Players.LocalPlayer.Character.Head.Massless = true
+end)
+
+MainSection:NewButton("OUTFIT CHANGER", "Changes You Outfit", function()
+    loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\73\110\118\111\111\107\101\114\49\49\47\79\117\116\102\105\116\47\109\97\105\110\47\79\117\116\102\105\116\67\111\112\105\101\114\46\108\117\97\34\44\32\116\114\117\101\41\41\40\41\10")()
+end)
+
+
+--SideScript
+local SideScript = Window:NewTab("SideScript")
+local SideScriptSection = SideScript:NewSection("SideScript")
+
+SideScriptSection:NewButton("Fe Jesus", "-- da hood fe jesus", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/cjdjmj/fejesusscript/main/README.md", true))()
+end)
+
+SideScriptSection:NewButton("Trash Talk", "Makes You Trash Talk", function()
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Keybind J";
+        Text = "Made by federal#6782";
+        Duration = 5
+        })
+    
+    local plr = game.Players.LocalPlayer
+    repeat wait() until plr.Character
+    local char = plr.Character
+    
+    local garbage = {
+        "seed";
+        "focus son";
+        "ez";
+        "wyd son";
+        "log already";
+        "bad";
+    
+    
+    }
+    
+    
+    function TrashTalk(inputObject, gameProcessedEvent)
+        if inputObject.KeyCode == Enum.KeyCode.J and gameProcessedEvent == false then        
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(
+            garbage[math.random(1,#garbage)],
+            "All"
+        )
+        end
+    end
+     
+    game:GetService("UserInputService").InputBegan:connect(TrashTalk)
+end)
+
+SideScriptSection:NewButton("Fe Jesus", "da hood fe jesus", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/cjdjmj/fejesusscript/main/README.md", true))()
+end)
+
+SideScriptSection:NewButton("Animation Pack", "Gives You Animation Pack", function()
+    for _, v in next, game:GetService("CoreGui"):GetChildren() do
+        if (v.Name:match("Animation")) then
+            v:Destroy()
+        end
+    end
+    
+    local Folder = Instance.new('Folder', game:GetService("Workspace"))
+    Folder.Name = ("Animation")
+    
+    local LeanAnimation = Instance.new("Animation", Folder)
+    LeanAnimation.Name = "LeanAnimation"
+    LeanAnimation.AnimationId = "rbxassetid://3152375249"
+    
+    local LayAnimation = Instance.new("Animation", Folder)
+    LayAnimation.Name = "LayAnimation"
+    LayAnimation.AnimationId = "rbxassetid://3152378852"
+    
+    local Dance1Animation = Instance.new("Animation", Folder)
+    Dance1Animation.Name = "Dance1Animation"
+    Dance1Animation.AnimationId = "rbxassetid://3189773368"
+    
+    local Dance2Animation = Instance.new("Animation", Folder)
+    Dance2Animation.Name = "Dance2Animation"
+    Dance2Animation.AnimationId = "rbxassetid://3189776546"
+    
+    local GreetAnimation = Instance.new("Animation", Folder)
+    GreetAnimation.Name = "GreetAnimation"
+    GreetAnimation.AnimationId = "rbxassetid://3189777795"
+    
+    local ChestPumpAnimation = Instance.new("Animation", Folder)
+    ChestPumpAnimation.Name = "ChestPumpAnimation"
+    ChestPumpAnimation.AnimationId = "rbxassetid://3189779152"
+    
+    local PrayingAnimation = Instance.new("Animation", Folder)
+    PrayingAnimation.Name = "PrayingAnimation"
+    PrayingAnimation.AnimationId = "rbxassetid://3487719500"
+    
+    if game.PlaceId == 2788229376 then
+        function AnimationPack(Character)
+            Character:WaitForChild'HumanoidRootPart'
+            local Animation = Instance.new("ScreenGui")
+            local AnimationPack = Instance.new("TextButton")
+            local CloseButton = Instance.new("TextButton")
+            local ScrollingFrame = Instance.new("ScrollingFrame")
+            local ChestPumpButton = Instance.new("TextButton")
+            local Dance1Button = Instance.new("TextButton")
+            local Dance2Button = Instance.new("TextButton")
+            local LayButton = Instance.new("TextButton")
+            local GreetButton = Instance.new("TextButton")
+            local LeanButton = Instance.new("TextButton")
+            local PrayingButton = Instance.new("TextButton")
+    
+            Animation.Name = "Animation"
+            Animation.Parent = game.CoreGui
+            Animation.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    
+            AnimationPack.Name = "AnimationPack"
+            AnimationPack.Parent = Animation
+            AnimationPack.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            AnimationPack.BorderSizePixel = 0
+            AnimationPack.Position = UDim2.new(0, 0, 0.5, 0)
+            AnimationPack.Size = UDim2.new(0, 100, 0, 20)
+            AnimationPack.Visible = false
+            AnimationPack.Font = Enum.Font.SourceSansBold
+            AnimationPack.Text = "Animations"
+            AnimationPack.TextColor3 = Color3.fromRGB(0, 0, 0)
+            AnimationPack.TextSize = 18.000
+    
+            CloseButton.Name = "CloseButton"
+            CloseButton.Parent = AnimationPack
+            CloseButton.BackgroundColor3 = Color3.fromRGB(255, 112, 112)
+            CloseButton.Position = UDim2.new(0, 0, 0, 97)
+            CloseButton.Size = UDim2.new(0, 120, 0, 25)
+            CloseButton.Visible = false
+            CloseButton.Font = Enum.Font.SourceSansBold
+            CloseButton.Text = "CLOSE"
+            CloseButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+            CloseButton.TextSize = 30.000
+    
+            ScrollingFrame.Parent = AnimationPack
+            ScrollingFrame.Active = true
+            ScrollingFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+            ScrollingFrame.BackgroundColor3 = Color3.fromRGB(102, 102, 102)
+            ScrollingFrame.Position = UDim2.new(0, 60, 0, 0)
+            ScrollingFrame.Size = UDim2.new(0, 120, 0, 195)
+            ScrollingFrame.Visible = false
+            ScrollingFrame.CanvasSize = UDim2.new(0, 0, 1, 200)
+    
+            ChestPumpButton.Name = "ChestPumpButton"
+            ChestPumpButton.Parent = ScrollingFrame
+            ChestPumpButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            ChestPumpButton.Position = UDim2.new(0, 0, 0.727272749, 0)
+            ChestPumpButton.Size = UDim2.new(1, 0, 0, 30)
+            ChestPumpButton.Font = Enum.Font.GothamBlack
+            ChestPumpButton.Text = "Chest Pump"
+            ChestPumpButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+            ChestPumpButton.TextSize = 12.000
+            ChestPumpButton.TextWrapped = true
+    
+            Dance1Button.Name = "Dance1Button"
+            Dance1Button.Parent = ScrollingFrame
+            Dance1Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            Dance1Button.Position = UDim2.new(0, 0, 0.290909111, 0)
+            Dance1Button.Size = UDim2.new(1, 0, 0, 30)
+            Dance1Button.Font = Enum.Font.GothamBlack
+            Dance1Button.Text = "Dance1"
+            Dance1Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+            Dance1Button.TextSize = 12.000
+            Dance1Button.TextWrapped = true
+    
+            Dance2Button.Name = "Dance2Button"
+            Dance2Button.Parent = ScrollingFrame
+            Dance2Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            Dance2Button.Position = UDim2.new(0, 0, 0.436363667, 0)
+            Dance2Button.Size = UDim2.new(1, 0, 0, 30)
+            Dance2Button.Font = Enum.Font.GothamBlack
+            Dance2Button.Text = "Dance2"
+            Dance2Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+            Dance2Button.TextSize = 12.000
+            Dance2Button.TextWrapped = true
+    
+            LayButton.Name = "LayButton"
+            LayButton.Parent = ScrollingFrame
+            LayButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            LayButton.Position = UDim2.new(0, 0, 0.145454556, 0)
+            LayButton.Size = UDim2.new(1, 0, 0, 30)
+            LayButton.Font = Enum.Font.GothamBlack
+            LayButton.Text = "Lay"
+            LayButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+            LayButton.TextSize = 12.000
+            LayButton.TextWrapped = true
+    
+            GreetButton.Name = "GreetButton"
+            GreetButton.Parent = ScrollingFrame
+            GreetButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            GreetButton.Position = UDim2.new(0, 0, 0.581818223, 0)
+            GreetButton.Size = UDim2.new(1, 0, 0, 30)
+            GreetButton.Font = Enum.Font.GothamBlack
+            GreetButton.Text = "Greet"
+            GreetButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+            GreetButton.TextSize = 12.000
+            GreetButton.TextWrapped = true
+    
+            LeanButton.Name = "LeanButton"
+            LeanButton.Parent = ScrollingFrame
+            LeanButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            LeanButton.Size = UDim2.new(1, 0, 0, 30)
+            LeanButton.Font = Enum.Font.GothamBlack
+            LeanButton.Text = "Lean"
+            LeanButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+            LeanButton.TextSize = 12.000
+            LeanButton.TextWrapped = true
+    
+            PrayingButton.Name = "PrayingButton"
+            PrayingButton.Parent = ScrollingFrame
+            PrayingButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            PrayingButton.Position = UDim2.new(5.96046448e-08, 0, 0.872727275, 0)
+            PrayingButton.Size = UDim2.new(1, 0, 0, 30)
+            PrayingButton.Font = Enum.Font.GothamBlack
+            PrayingButton.Text = "Praying"
+            PrayingButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+            PrayingButton.TextSize = 12.000
+            PrayingButton.TextWrapped = true
+    
+            wait(1)
+    
+            local AnimationPack = game:GetService("CoreGui").Animation.AnimationPack
+            local ScrollingFrame = AnimationPack.ScrollingFrame
+            local CloseButton = AnimationPack.CloseButton
+    
+            AnimationPack.Visible = true
+    
+            local Lean = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(LeanAnimation)
+    
+            local Lay = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(LayAnimation)
+    
+            local Dance1 = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(Dance1Animation)
+    
+            local Dance2 = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(Dance2Animation)
+    
+            local Greet = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(GreetAnimation)
+    
+            local ChestPump = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(ChestPumpAnimation)
+    
+            local Praying = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(PrayingAnimation)
+    
+            function Stop()
+                Lay:Stop()
+                Lean:Stop()
+                Dance1:Stop()
+                Dance2:Stop()
+                Greet:Stop()
+                ChestPump:Stop()
+                Praying:Stop()
+            end
+    
+            local LeanTextButton = ScrollingFrame.LeanButton
+            local LayTextButton = ScrollingFrame.LayButton
+            local Dance1TextButton = ScrollingFrame.Dance1Button
+            local Dance2TextButton = ScrollingFrame.Dance2Button
+            local GreetTextButton = ScrollingFrame.GreetButton
+            local ChestPumpTextButton = ScrollingFrame.ChestPumpButton
+            local PrayingTextButton = ScrollingFrame.PrayingButton
+    
+            AnimationPack.MouseButton1Click:Connect(function()
+                if ScrollingFrame.Visible == false then
+                    ScrollingFrame.Visible = true
+                    CloseButton.Visible = true
+                end
+            end)
+            CloseButton.MouseButton1Click:Connect(function()
+                if ScrollingFrame.Visible == true then
+                    ScrollingFrame.Visible = false
+                    CloseButton.Visible = false
+                end
+            end)
+            LeanTextButton.MouseButton1Click:Connect(function()
+                Stop()
+                Lean:Play()
+            end)
+            LayTextButton.MouseButton1Click:Connect(function()
+                Stop()
+                Lay:Play()
+            end)
+            Dance1TextButton.MouseButton1Click:Connect(function()
+                Stop()
+                Dance1:Play()
+            end)
+            Dance2TextButton.MouseButton1Click:Connect(function()
+                Stop()
+                Dance2:Play()
+            end)
+            GreetTextButton.MouseButton1Click:Connect(function()
+                Stop()
+                Greet:Play()
+            end)
+            ChestPumpTextButton.MouseButton1Click:Connect(function()
+                Stop()
+                ChestPump:Play()
+            end)
+            PrayingTextButton.MouseButton1Click:Connect(function()
+                Stop()
+                Praying:Play()
+            end)
+    
+            game:GetService("Players").LocalPlayer.Character.Humanoid.Running:Connect(function()
+                Stop()
+            end)
+            game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
+                if game.CoreGui:FindFirstChild("Animation") then
+                    game.CoreGui.Animation:Destroy()
+                end
+            end)
+        end
+        AnimationPack(game.Players.LocalPlayer.Character)
+        game.Players.LocalPlayer.CharacterAdded:Connect(AnimationPack)
+    end
+end)
+
+SideScriptSection:NewButton("Fake Macro", "Click M To Go Faster", function()
+    repeat wait() until game:IsLoaded() 
+
+getgenv().Fix = true
+
+getgenv().TeclasWS = {
+    ["tecla1"] = "M", -- speed +5
+    ["tecla2"] = "N", -- speed -5
+    ["tecla3"] = "V" -- toggle  
+}
+
+
+
+-- // servicios
+local MININOS_DOXXEADOS = game:GetService("Players")
+local AUDIOS_LOUD_DE_TRAP = game:GetService("StarterGui") or "son una mierda"
+
+-- // objetos
+local neonazi = MININOS_DOXXEADOS.LocalPlayer
+local esvastica = neonazi:GetMouse()
+
+-- // variables
+local lista_de_victimas_de_drizzy = getrenv()._G
+local da_hood_rblxm_REAL = getrawmetatable(game)
+local CP = da_hood_rblxm_REAL.__newindex
+local CP_DE_DRIZZY = da_hood_rblxm_REAL.__index
+local velocidad_de_cum = 122
+local es_pedofilo = true
+
+-- // funciones para acortar codigo :]
+function anunciar_atentado_terrorista(fecha_del_atentado)
+    AUDIOS_LOUD_DE_TRAP:SetCore("SendNotification",{
+        Title="Xlazui#2571",
+        Text=fecha_del_atentado,
+        Icon="rbxthumb://type=Asset&id=1332213374&w=150&h=150"
+       })
+end
+
+
+getgenv().TECHWAREWALKSPEED_LOADED = true
+
+
+wait(1.5)
+
+
+anunciar_atentado_terrorista("Welcome"..TeclasWS.tecla3.."")
+
+-- // conexiÃ³n
+esvastica.KeyDown:Connect(function(el_impostor)
+    if el_impostor:lower() == TeclasWS.tecla1:lower() then
+        velocidad_de_cum = velocidad_de_cum + 50
+        anunciar_atentado_terrorista(" (speed =   "..tostring(velocidad_de_cum)..")")
+    elseif el_impostor:lower() == TeclasWS.tecla2:lower() then
+        velocidad_de_cum = velocidad_de_cum - 50
+        anunciar_atentado_terrorista(" (speed =  "..tostring(velocidad_de_cum)..")")
+    elseif el_impostor:lower() == TeclasWS.tecla3:lower() then
+        if es_pedofilo then
+            es_pedofilo = false
+            anunciar_atentado_terrorista("speed off")
+        else
+            es_pedofilo = true
+            anunciar_atentado_terrorista("speed on")
+        end
+    end
+end)
+
+-- // mi parte favorita: metametodos
+setreadonly(da_hood_rblxm_REAL,false)
+da_hood_rblxm_REAL.__index = newcclosure(function(BEST_ON_TOP,IS_GARBAGE)
+    local esPedofilo = checkcaller()
+    if IS_GARBAGE == "WalkSpeed" and not esPedofilo then
+        return lista_de_victimas_de_drizzy.CurrentWS
+    end
+    return CP_DE_DRIZZY(BEST_ON_TOP,IS_GARBAGE)
+end)
+da_hood_rblxm_REAL.__newindex = newcclosure(function(kaias,ip,logger)
+    local unNeonazi = checkcaller()
+    if es_pedofilo then
+        if ip == "WalkSpeed" and logger ~= 0 and not unNeonazi then
+            return CP(kaias,ip,velocidad_de_cum)
+        end
+    end
+    return CP(kaias,ip,logger)
+end)
+setreadonly(da_hood_rblxm_REAL,true)
+
+repeat wait() until game:IsLoaded()
+local Players = game:service('Players')
+local Player = Players.LocalPlayer
+
+repeat wait() until Player.Character
+
+local userInput = game:service('UserInputService')
+local runService = game:service('RunService')
+
+local Multiplier = -0.22
+local Enabled = false
+local whentheflashnoiq
+
+userInput.InputBegan:connect(function(Key)
+    if Key.KeyCode == Enum.KeyCode.LeftBracket then
+        Multiplier = Multiplier + 0.01
+        print(Multiplier)
+        wait(0.2)
+        while userInput:IsKeyDown(Enum.KeyCode.LeftBracket) do
+            wait()
+            Multiplier = Multiplier + 0.01
+            print(Multiplier)
+        end
+    end
+
+    if Key.KeyCode == Enum.KeyCode.RightBracket then
+        Multiplier = Multiplier - 0.01
+        print(Multiplier)
+        wait(0.2)
+        while userInput:IsKeyDown(Enum.KeyCode.RightBracket) do
+            wait()
+            Multiplier = Multiplier - 0.01
+            print(Multiplier)
+        end
+    end
+
+    if Key.KeyCode == Enum.KeyCode.P then
+        Enabled = not Enabled
+        if Enabled == true then
+            repeat
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.Humanoid.MoveDirection * Multiplier
+                game:GetService("RunService").Stepped:waitn()
+            until Enabled == true
+        end
+    end
+end)
+
+if Fix == true then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/youtubetutorials123/helo/main/123"))()
+end
+
+end)
+
+-- SilentAim
+local SilentAim = Window:NewTab("SilentAim")
+local SilentAimSection = SilentAim:NewSection("SilentAim")
+
+SilentAimSection:NewButton("SilentAim", "SilentAim", function()
+    local hotkey = "t" -- toggle key
+local mouse = game.Players.LocalPlayer:GetMouse()
+
+
+
+mouse.KeyDown:Connect(function(key)
+if key == hotkey then
+if getgenv().ValiantAimHacks.SilentAimEnabled == true then
+ getgenv().ValiantAimHacks.SilentAimEnabled = false
+else
+getgenv().ValiantAimHacks.SilentAimEnabled = true
+end
+end
+end)
+
+
+-- // Services
+local Players = game:GetService("Players")
+
+-- // Vars
+local LocalPlayer = Players.LocalPlayer
+local accomidationfactor = 0.12567724521
+
+-- // Silent Aim Module
+local SilentAim = loadstring(game:HttpGet("https://pastebin.com/raw/2f0mGbMP"))()
+SilentAim.TeamCheck = false
+-- // Metatable vars
+local mt = getrawmetatable(game)
+local backupindex = mt.__index
+setreadonly(mt, false)
+
+-- // Check if player is down
+SilentAim.checkSilentAim = function()
+    local checkA = (SilentAim.SilentAimEnabled == true and SilentAim.Selected ~= LocalPlayer)
+    local playerCharacter = SilentAim.Selected.Character
+    local daHood = (playerCharacter.BodyEffects["K.O"].Value == false or playerCharacter:FindFirstChild("GRABBING_CONSTRAINT") ~= nil)
+
+    return (checkA and daHood)
+end
+
+-- // Hook
+mt.__index = newcclosure(function(t, k)
+    if (t:IsA("Mouse") and (k == "Hit")) then
+        print(t, k)
+        local CPlayer = SilentAim.Selected
+        if (SilentAim.checkSilentAim()) then
+            if (CPlayer.Character:FindFirstChild("HumanoidRootPart")) then
+                return {p=(CPlayer.Character.HumanoidRootPart.CFrame.p+(CPlayer.Character.HumanoidRootPart.Velocity*accomidationfactor))}
+            end
+        end
+    end
+    return backupindex(t, k)
+end)
+
+-- // Revert
+setreadonly(mt, true)
+getgenv().ValiantAimHacks.FOV = 50
+end)
+
+--AutoFarm
+local AutoFarm = Window:NewTab("AutoFarm")
+local AutoFarmSection = AutoFarm:NewSection("AutoFarm")
+
+AutoFarmSection:NewButton("AutoFarm", "Makes You Auto Rob", function()
+    repeat
+        wait()
+    until game:IsLoaded()
+    local gm = getrawmetatable(game)
+    setreadonly(gm, false)
+    local namecall = gm.__namecall
+    gm.__namecall =
+        newcclosure(
+        function(self, ...)
+            local args = {...}
+            if not checkcaller() and getnamecallmethod() == "FireServer" and tostring(self) == "MainEvent" then
+                if tostring(getcallingscript()) ~= "Framework" then
+                    return
+                end
+            end
+            if not checkcaller() and getnamecallmethod() == "Kick" then
+                return
+            end
+            return namecall(self, unpack(args))
+        end
+    )
+    
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+    
+    function gettarget()
+        local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:wait()
+        local HumanoidRootPart = Character:WaitForChild("HumanoidRootPart")
+        local maxdistance = math.huge
+        local target
+        for i, v in pairs(game:GetService("Workspace").Cashiers:GetChildren()) do
+            if v:FindFirstChild("Head") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+                local distance = (HumanoidRootPart.Position - v.Head.Position).magnitude
+                if distance < maxdistance then
+                    target = v
+                    maxdistance = distance
+                end
+            end
+        end
+        return target
+    end
+    
+    for i, v in pairs(workspace:GetDescendants()) do
+        if v:IsA("Seat") then
+            v:Destroy()
+        end
+    end
+    
+    print("Credits To Nona Pls Credits ")
+    
+    shared.MoneyFarm = true -- Just execute shared.MoneyFarm = false to stop farming
+    
+    while shared.MoneyFarm do
+        wait()
+        local Target = gettarget()
+        repeat
+            wait()
+            pcall(
+                function()
+                    local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:wait()
+                    local HumanoidRootPart = Character:WaitForChild("HumanoidRootPart")
+                    local Combat = LocalPlayer.Backpack:FindFirstChild("Combat") or Character:FindFirstChild("Combat")
+                    if not Combat then
+                        Character:FindFirstChild("Humanoid").Health = 0
+                        return
+                    end
+                    HumanoidRootPart.CFrame = Target.Head.CFrame * CFrame.new(0, -2.5, 3)
+                    Combat.Parent = Character
+                    Combat:Activate()
+                end
+            )
+        until not Target or Target.Humanoid.Health < 0
+        for i, v in pairs(game:GetService("Workspace").Ignored.Drop:GetDescendants()) do
+            if v:IsA("ClickDetector") and v.Parent and v.Parent.Name:find("Money") then
+                local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:wait()
+                local HumanoidRootPart = Character:WaitForChild("HumanoidRootPart")
+                if (v.Parent.Position - HumanoidRootPart.Position).magnitude <= 18 then
+                    repeat
+                        wait()
+                        fireclickdetector(v)
+                    until not v or not v.Parent.Parent
+                end
+            end
+        end
+        wait(1)
+    end
+end)
